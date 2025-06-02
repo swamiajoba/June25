@@ -1,0 +1,7 @@
+Create Order application
+
+pages => OrderForm.jsp  , Bill.jsp
+
+JavaBean => Order
+
+controller => OrderServlet -> check validity of data such as price and quantity . if error or any exception it should go back to OrderForm.jsp . If success, then calculate bill ,populate Order JavaBean and send it to Bill.jsp
