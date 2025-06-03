@@ -1,0 +1,19 @@
+Generate banking app
+
+Generate following
+
+Model class => Account -> int aid , String customer,double  balance
+
+JSP => AccountForm.jsp to accept account details and submitted to AccountServlert
+
+JSP => AccountList.jsp => displays all accounts
+
+Servlet => AccountServlet add account object to list. 
+	If success, then go to SuccessAccount.jsp
+
+JSP => SuccessAccount.jsp display inserted account information
+
+Add appropriate filter
+======================================
+Add related jsp and servlet to perform action of
+withdraw and deposite
