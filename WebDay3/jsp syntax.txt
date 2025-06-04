@@ -1,0 +1,25 @@
+1. Directive
+
+<%@page  %>  ==> Page related , class related info
+
+
+
+2. Scriplets
+
+<% LocalDateTime dt=LocalDateTime.now(); %>
+
+
+3. Expression
+
+<%=dt %>   equivalent to <% out.println(dt); %>
+
+4. declaration 
+<%!  int res=0;
+	public int add (int a,int b) {
+		return a+b;
+	}
+ %>
+
+5. JSP comment
+<%-- comment --%>
+
