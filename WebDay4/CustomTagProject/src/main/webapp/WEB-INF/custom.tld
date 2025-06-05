@@ -1,0 +1,85 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+        http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>CustomTagSupport</short-name>
+    <uri>http://customtags</uri>
+    
+     <tag>
+        <name>simple</name>
+        <tag-class>com.customtags.SimpleTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+    
+      <tag>
+        <name>attribute</name>
+        <tag-class>com.customtags.AttributeTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>message</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+     <tag>
+        <name>gst</name>
+        <tag-class>com.customtags.GstTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>amount</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+         <attribute>
+            <name>percent</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+     <tag>
+        <name>bodyOnly</name>
+        <tag-class>com.customtags.BodyOnlyTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    
+      <tag>
+        <name>attrBody</name>
+        <tag-class>com.customtags.AttributeBodyTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>prefix</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+     <tag>
+        <name>formatText</name>
+        <tag-class>com.customtags.FormatTextTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>bold</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>underline</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ </taglib>
