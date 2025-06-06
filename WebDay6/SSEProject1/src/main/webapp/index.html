@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE Progress Example</title>
+</head>
+<body>
+  <h2>Server-Sent Events (SSE)</h2>
+  <button onclick="startSSE()">Start SSE Task</button>
+  <div id="events"></div>
+
+  <script>
+    function startSSE() {
+      const evtSource = new EventSource("SSEServlet");
+      const output = document.getElementById("events");
+      output.innerHTML = "";
+
+      evtSource.onmessage = function(e) {
+        output.innerHTML += `<p>${e.data}</p>`;
+      };
+
+      evtSource.onerror = function() {
+        output.innerHTML += "<p><strong>Disconnected.</strong></p>";
+        evtSource.close();
+      };
+    }
+  </script>
+</body>
+</html>

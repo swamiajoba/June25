@@ -1,0 +1,17 @@
+<script>
+function sendRequest() {
+    fetch('AsyncLongRunningServlet?time=8000')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('output').innerHTML = data;
+        })
+        .catch(err => console.error('Error:', err));
+}
+
+
+</script>
+
+<button onclick="sendRequest()">Start Async Task</button>
+<div id="output"></div>
+
+
