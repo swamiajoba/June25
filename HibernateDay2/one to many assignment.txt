@@ -1,0 +1,15 @@
+One Blog have multiple Comment
+
+class Blog {
+int blogId;
+String blogContent;
+String author;
+Date postedAt;
+}
+
+class Comment {
+int commentId;
+String postedBy;
+String content;
+}
+
