@@ -1,0 +1,50 @@
+[INFO] 2023-12-23 23:25:25.609 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.611 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.613 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.613 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.614 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.615 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.615 [main] MyLoggerAapect = ----------------------------
+[INFO] 2023-12-23 23:25:25.615 [main] MyLoggerAapect = =>before additional concern
+[INFO] 2023-12-23 23:25:25.617 [main] MyLoggerAapect = Method Signature: void com.gp.service.ValidatorService.m1()
+[INFO] 2023-12-23 23:25:25.617 [main] MyLoggerAapect = Method Arguments: 
+[INFO] 2023-12-23 23:25:25.617 [main] MyLoggerAapect = =>end of before advice...
+[INFO] 2023-12-23 23:25:25.617 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.617 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = =>after additional concern
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = Method Signature: void com.gp.service.ValidatorService.m1()
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = =>end of after  advice...
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = ----------------------------
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.618 [main] MyLoggerAapect = ----------------------------
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = =>before additional concern
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = Method Signature: void com.gp.service.ValidatorService.m2()
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = Method Arguments: 
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = =>end of before advice...
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = =>after additional concern
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = Method Signature: void com.gp.service.ValidatorService.m2()
+[INFO] 2023-12-23 23:25:25.619 [main] MyLoggerAapect = =>end of after  advice...
+[INFO] 2023-12-23 23:25:25.620 [main] MyLoggerAapect = ----------------------------
+[INFO] 2023-12-23 23:25:25.621 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.621 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.621 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.621 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.622 [main] MyLoggerAapect = =>after returning additional concern
+[INFO] 2023-12-23 23:25:25.622 [main] MyLoggerAapect = Method Signature: double com.gp.service.CalculatorService.calculateDbr(double,double)
+[INFO] 2023-12-23 23:25:25.624 [main] MyLoggerAapect = Result in advice: 2.0
+[INFO] 2023-12-23 23:25:25.624 [main] MyLoggerAapect = =>end of after returning advice...
+[INFO] 2023-12-23 23:25:25.624 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.624 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.625 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.626 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = => Aournd concern
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = Around Concern Before calling actual method
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = Around Concern After calling actual method
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = =>end of around advice...
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = =>after returning additional concern
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = Method Signature: double com.gp.service.CalculatorService.caltax(double)
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = Result in advice: 2000.0
+[INFO] 2023-12-23 23:25:25.627 [main] MyLoggerAapect = =>end of after returning advice...

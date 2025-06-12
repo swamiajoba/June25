@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop = "http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+
+
+    <bean id="calculatorService" class="com.gp.service.CalculatorServiceImpl" ></bean>
+
+    <bean id="validatorService" class="com.gp.service.ValidatorServiceImpl" ></bean>
+
+    <bean id="logging" class="com.gp.aop.MyLoggerAapect" />
+
+    <aop:config proxy-target-class="true">
+        <aop:aspect id = "log" ref = "logging">
+        <!--    <aop:pointcut id = "selectAll" expression = "execution(* com.gp.service.*.*(..))"/>-->
+            <aop:pointcut id = "selectAllm" expression = "execution(* com.gp.service.*.m*(..))"/>
+            <aop:pointcut id = "selectAllvs" expression = "execution(* com.gp.service.ValidatorServiceImpl.validate(..))"/>
+            <aop:pointcut id = "selectAllcs" expression = "execution(* com.gp.service.CalculatorServiceImpl.cal*(..))"/>
+
+            <aop:before  pointcut-ref = "selectAllm" method = "myadvice_before"/>
+            <aop:after pointcut-ref = "selectAllm" method = "myadvice_after"/>
+            <aop:after-returning pointcut-ref = "selectAllvs"
+                                 returning = "result"
+                                 method = "myadvice_afterReturning"/>
+
+            <aop:after-returning pointcut-ref = "selectAllcs"
+                                 returning = "result"
+                                 method = "myadvice_afterReturning"/>
+            <aop:after-throwing pointcut-ref = "selectAllcs"
+                                throwing = "error"
+                                method = "myadvice_afterthrowing"/>
+
+            <aop:around pointcut-ref="selectAllvs" method="myadvice1_around"/>
+        </aop:aspect>
+    </aop:config>
+
+
+</beans>

@@ -1,0 +1,4 @@
+[INFO] 2025-06-12 12:35:17.742 [main] CalculatorServiceImpl = --> method calculateDbr == parameters monthlyIncome 100000.0 , monthlyExpenses = 50000.0
+[INFO] 2025-06-12 12:35:17.743 [main] CalculatorServiceImpl = ->Executing showDbr
+[INFO] 2025-06-12 12:35:17.745 [main] CalculatorServiceImpl = ==>calTax method , amount=9000.0
+[ERROR] 2025-06-12 12:35:17.745 [main] CalculatorServiceImpl = Tax is not applicable for amount 9000.0
