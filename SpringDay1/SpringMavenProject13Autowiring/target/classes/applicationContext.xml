@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <!-- autowire byConstructor -->
+ <bean id="addr" class="com.bean.Address">
+  <constructor-arg name="aid" value="10"></constructor-arg>
+  <constructor-arg name="city" value="Pune"></constructor-arg>
+  <constructor-arg name="zip" value="400 102"></constructor-arg>
+
+ </bean>
+
+<!-- the constructor of 4 parameters will be executed -->
+ <bean id="empbean" class="com.bean.Employee" scope="singleton" autowire="constructor">
+  <constructor-arg name="eid" value="100"></constructor-arg>
+  <constructor-arg name="ename" value="Manjiri"></constructor-arg>
+  <constructor-arg name="salary" value="25000.00"></constructor-arg>
+ </bean>
+
+
+
+</beans>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <!-- autowire byType =  object is located by class type of the prppery -->
+<!--  <bean id="addr" class="com.bean.Address">
+  <property name="aid" value="10"></property>
+  <property name="city" value="Pune"></property>
+  <property name="zip" value="400 102"></property>
+
+ </bean> -->
+<!-- if u have more then one bean of Address type ,then byType autowiring throws Exception -->
+ <!-- 
+ <bean id="addr1" class="com.bean.Address">
+  <property name="aid" value="11"></property>
+  <property name="city" value="Delhi"></property>
+  <property name="zip" value="400 103"></property>
+
+ </bean>-->
+
+ <!-- In byType addr object of Address will be auto injected in Employee address -->
+<!--  <bean id="empbean" class="com.bean.Employee" scope="singleton" autowire="byType">
+  <property name="eid" value="100"></property>
+  <property name="ename" value="Manjiri"></property>
+  <property name="salary" value="25000.00"></property>
+ </bean> -->
+
+
+
+
+<!-- Autowiring byName = bean id=address and property name is address in Employee class -->
+
+<!--  <bean id="address" class="com.bean.Address">
+  <property name="aid" value="11"></property>
+  <property name="city" value="Mumbai"></property>
+  <property name="zip" value="400 101"></property>
+
+ </bean> -->
+
+ <!--container will locate address prpperty object by name and inject it inside Employee-->
+ 
+<!--  <bean id="empbean" class="com.bean.Employee" scope="singleton" autowire="byName">
+  <property name="eid" value="100"></property>
+  <property name="ename" value="Manjiri"></property>
+  <property name="salary" value="25000.00"></property>
+ </bean> -->
+
+ <!--no wiring -->
+ <bean id="address" class="com.bean.Address">
+<property name="aid" value="11"></property>  
+<property name="city" value="Mumbai"></property>
+<property name="zip" value="400 101"></property>
+
+</bean>
+
+  <!-- Employee is having Address object -->
+
+ 
+ <bean id="empbean" class="com.bean.Employee" scope="singleton">
+<property name="eid" value="100"></property>
+<property name="ename" value="Manjiri"></property>
+<property name="salary" value="25000.00"></property>
+
+</bean>
+  
+   
+</beans>
