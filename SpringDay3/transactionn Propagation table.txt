@@ -1,0 +1,50 @@
+@Transactional		t1		t2
+Propagation
+REQUIRED		exist		use existing and run
+			does not exist	create new transaction
+
+@Transactional		t1		t2
+Propagation
+REQUIRES_NEW		exist		suspend current transaction t1 and create new transaction
+			does not exist	create new transaction
+
+
+@Transactional		t1		t2
+Propagation
+MANDATORY		exist		always use existing and run
+			does not exist	throw Exception
+
+
+
+
+@Transactional		t1		t2
+Propagation
+NOT_SUPPORTED		exist		suspend current transaction and execute business logic
+			does not exist	execute business logic . does not generate new transaction
+
+
+
+@Transactional		t1		t2
+Propagation
+SUPPORTS		exist		use existing transaction and execute business logic
+			does not exist	execute business logic without transaction . does not generate new transaction , does not raise exception
+						generally applied on select quries
+
+
+@Transactional		t1		t2
+Propagation
+NEVER			exist		raise exception
+			does not exist	execute business logic without transaction . does not generate new transaction , does not raise exception
+
+
+@Transactional		t1		t2
+Propagation
+NESTED			exist		generate savepoint and run , if in method exception occurs then rollback upto savepoint
+			does not exist	create new transaction , generate savepoint and run , if in method exception occurs then rollback upto savepoint
+				
+
+
+
+
+
+
