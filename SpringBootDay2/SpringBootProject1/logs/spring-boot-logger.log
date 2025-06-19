@@ -1,0 +1,22 @@
+2025-06-19 12:14:01,851 INFO o.s.b.StartupInfoLogger [main] Starting SpringBootProject1Application using Java 21.0.5 with PID 5456 (D:\Mphasis_June_25\SpringBoot\SpringBootWorkspace\SpringBootProject1\SpringBootProject1\target\classes started by manji in D:\Mphasis_June_25\SpringBoot\SpringBootWorkspace\SpringBootProject1\SpringBootProject1)
+2025-06-19 12:14:01,853 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-19 12:14:01,854 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-06-19 12:14:02,443 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2025-06-19 12:14:02,453 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2025-06-19 12:14:02,456 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-06-19 12:14:02,457 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-19 12:14:02,492 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-06-19 12:14:02,492 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 598 ms
+2025-06-19 12:14:02,772 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2025-06-19 12:14:02,788 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2025-06-19 12:14:02,794 INFO o.s.b.StartupInfoLogger [main] Started SpringBootProject1Application in 1.419 seconds (process running for 1.854)
+2025-06-19 12:14:49,075 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-19 12:14:49,076 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-06-19 12:14:49,076 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 0 ms
+2025-06-19 12:14:49,104 INFO c.e.c.AccountController [http-nio-8082-exec-1] Getting Account by ID
+2025-06-19 12:14:49,104 TRACE c.e.c.AccountController [http-nio-8082-exec-1] Account id is 101
+2025-06-19 12:17:11,140 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
+2025-06-19 12:17:11,145 INFO o.s.b.w.e.t.GracefulShutdown [RMI TCP Connection(11)-127.0.0.1] Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-19 12:17:11,146 INFO o.a.j.l.DirectJDKLog [tomcat-shutdown] Pausing ProtocolHandler ["http-nio-8082"]
+2025-06-19 12:17:11,151 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-06-19 12:17:11,152 INFO o.a.j.l.DirectJDKLog [RMI TCP Connection(11)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8082"]
