@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome to Thymeleaf view</h1>
+	<h3 th:text="'Welcome '+${name}+'!'"></h3>
+	<h3>You Product is</h3>
+	<table border="1">
+		<tr><th>Product ID</th><th>ProductName</th><th>Price</th><th>Quantity</th></tr>
+		<tr th:each="p : ${products}">
+			<td th:text="${p.pid}">
+			<td th:text="${p.name}">
+			<td th:text="${p.price}">
+			<td th:text="${p.qty}">
+		</tr>
+	</table>
+</body>
+</html>
