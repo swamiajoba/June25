@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: User API
+  version: 1.0.0
+  description: API to manage users
+
+servers:
+  - url: http://localhost:8084
+
+paths:
+  /users:
+    get:
+      summary: Get all users
+      operationId: getAllUsers
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/$defs/User'
+
+  /users/{id}:
+    get:
+      summary: Get a user by ID
+      operationId: getUserById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A user object
+          content:
+            application/json:
+              schema:
+                $ref: '#/$defs/User'
+        '404':
+          description: User not found
+
+$defs:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      email:
+        type: string
+    required:
+      - id
+      - name
+      - email
