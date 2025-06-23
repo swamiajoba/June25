@@ -1,0 +1,128 @@
+TypeScript is a superset of JavaScript.
+
+What is an Angular?
+Angular is a typescript based framework using 
+which we can develop Single Page Application(SPA ).
+It is developed by Google.
+
+It is used to develop single pgae application in which
+the entire page will not be refreshed rather the part of
+page or screen is refreshed along with url.
+
+We require node.js and npm to be installed.
+npm -> node package manager.
+
+When we install node.js , at that time it installs
+npm also. 
+
+to check is type command
+
+C:\Users\manji>node --version
+v23.11.0
+
+C:\Users\manji>npm --version
+10.9.2
+
+To develop angular application we use 
+Microsoft Visual Studio Code editor.
+
+To create a angular project we type command 
+
+D:\Mphasis_June_25\AngularDemos>
+         npx -p @angular/cli@15 ng new webapp1
+
+To run the application type command
+
+D:\Mphasis_June_25\AngularDemos>cd webapp1
+
+D:\Mphasis_June_25\AngularDemos\webapp1>npx ng serve
+
+
+Files and folder structure in webapp1
+
+1.	tsconfig.app.json  
+	tsconfig.json
+	=> typescript configuration  for angular app
+
+	tsconfig.spec.json
+	=> typescript testing 
+
+2.	package.json
+	=> it  have dependencies along with version 
+	required for angular project app
+
+	package-lock.json
+	=> it is showing those dependencies which are 
+	installed and locked
+
+3. 	angular.json
+	=> it consist of angular project configuration
+
+	it shows which is first file executed
+	ie src/index.html
+
+	it shows which is first typescript will be loaded
+	and executed
+	ie src/main.ts
+
+
+4. 	src/index.html -> first file to show on browser
+	src/main.ts -> first file loaded and executed
+	src/styles.css -> global css for angular project
+
+5. 	src/app --> It consist of angular component
+	main component is AppComponent
+
+6.	src/app/app.module.ts 
+	=> it consist of list of angular components ,
+	pipes, services , modules , router module,
+	directives ......
+	what is there in angular project and who is
+	the first component loaded in browser
+
+Every component has 4 files
+for eg AppComponent has four files
+
+23-06-2025  11:22                 0 app.component.css
+23-06-2025  11:22            23,115 app.component.html
+23-06-2025  11:22             1,076 app.component.spec.ts
+23-06-2025  11:22               211 app.component.ts
+
+What is bootstrapping in angular?
+	=> It is process of initializing and loading
+	angular web application
+
+	1. starts from index.html -> this is a first page 
+	loads in the browser
+
+	2.  loads all the libraries mentioned in 	package.json
+
+	3. initialize angular.json
+	It shows which is the first file
+	in browser index.html
+	in app main.ts
+
+	4. loads and executes main.ts->which is the first 	module to load . by Defualt AppModule is the 
+	first module
+
+	5. AppModule is loaded and executed
+	file is app.module.ts
+	In this , it shows first component to be executed
+	by default AppComponent is exected
+
+	6. This AppComponent is loaded displayed in 	index.html it uses tag <app-root>
+
+
+To generate component command is
+	-> npx ng g c home
+	g for generate
+	c for component
+	home for name of the component
+
+
+
+
+
+
+
+
