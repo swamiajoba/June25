@@ -1,0 +1,47 @@
+<p>ngstyle-ex works!</p>
+
+<button [ngStyle]="{'color' : 'red' , 
+                    'font-weight' : 'bold' , 
+                    'font-size.px': 20 }">
+Click Style
+</button>
+
+<button [ngStyle] = "addButtonCSSStyle()">
+    Click for Dynamic Styles
+</button>
+<br>
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sr. No. </th>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Branch</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students;let num=index' [ngStyle] ="{'background-color':student.Gender === 'Male' ? 'yellow' : 'cyan'}">
+            <td>{{num+1}}</td>
+            <td>{{student.ID}}</td>
+            <td>{{student.FirstName}}</td>
+            <td>{{student.LastName}}</td>
+            <td>{{student.Branch}}</td>
+            <td>{{student.DOB}}</td>
+            <td>{{student.Gender}}</td>
+        </tr>
+        <tr *ngIf="!students || students.length==0">
+            <td colspan="8">
+                No Students to display
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+

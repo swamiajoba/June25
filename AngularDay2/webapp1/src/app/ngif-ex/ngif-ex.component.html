@@ -1,0 +1,29 @@
+<p>ngif-ex works!</p>
+
+<button (click) ="toggle()" >Toggle</button>
+
+<h1 *ngIf="show">Text will be shown if show = true</h1>
+
+<div *ngIf="show;then ad1 else ad2"></div>
+
+<ng-template #ad1>
+<font color="green" size="7">This will be for if condtion is true</font>
+</ng-template>
+
+<ng-template #ad2>
+   <font color="red" size="7">This will be for if condtion is false</font>
+</ng-template>
+
+
+<ng-template #myTemplate2 let-name="name">
+  <h2>Hello, {{ name }}!</h2>
+</ng-template>
+
+<div *ngIf="show">
+  <ng-container *ngTemplateOutlet="myTemplate2; context: { name: 'Angular' }">
+
+  </ng-container>
+</div>
+
+<hr>
+

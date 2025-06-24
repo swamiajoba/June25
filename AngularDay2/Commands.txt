@@ -1,0 +1,26 @@
+To   install bootstrap framework in Angular project
+	command is
+	->cd webapp1
+	-> webaap1> npm install bootstrap@5 --save
+
+It installs boostrap packages in node_modules
+if you are going with npm install bootstrap
+
+then after installing in angular.json file search for
+
+styles and add the path like...
+
+	"styles": [
+  	"node_modules/bootstrap/dist/css/bootstrap.min.css",
+  	"src/styles.css"
+	]
+==========================
+
+to generate component
+	->npx ng g c child
+
+
+
+
+
+
