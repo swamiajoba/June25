@@ -1,0 +1,34 @@
+<font color="red" size="7">
+    This is a home page
+</font>
+<!--string interpolation-->
+<div class="mb-3">
+    <label for="aid" class="form-label">Account Number</label>
+    <input type="text" class="form-control" id="aid" value="{{aid}}" >
+  </div>
+<!--property binding-->
+<div class="mb-3">
+    <label for="customer" class="form-label">Account Customer</label>
+    <input type="text" class="form-control" id="customer" [value]="customer" >
+  </div>
+
+<!--two way data binding-->
+<div class="mb-3">
+    <label for="balance" class="form-label">Account Balance</label>
+    <input type="text" class="form-control" id="balance" [(ngModel)]="balance" >
+  </div>
+
+
+    <!--evet binding-->
+  <div class="col-auto">
+    <button type="button" class="btn btn-primary mb-3" (click)="show()">Show data</button>
+  </div>
+
+
+
+<hr>
+<!--string interpolation-->
+<h2>My Account Info</h2>
+<h3>Account Number : {{aid}}</h3>
+<h3>Account Customer : {{customer}}</h3>
+<h3>Account balance : {{balance}}</h3>

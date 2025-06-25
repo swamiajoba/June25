@@ -1,0 +1,10 @@
+.child-box {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid green;
+}
+
+.card { 
+  padding: 10px; 
+  border: 1px solid #6f0505; 
+}

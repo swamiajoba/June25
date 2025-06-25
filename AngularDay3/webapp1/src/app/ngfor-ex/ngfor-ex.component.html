@@ -1,0 +1,44 @@
+<p>ngfor-ex works!</p>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sr. No. </th>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Branch</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students;let num=index;trackBy: trackByFn;'>
+            <td>{{num+1}}</td>
+            <td>{{student.ID}}</td>
+            <td>{{student.FirstName}}</td>
+            <td>{{student.LastName}}</td>
+            <td>{{student.Branch}}</td>
+            <td>{{student.DOB}}</td>
+            <td>{{student.Gender}}</td>
+        </tr>
+        <tr *ngIf="!students || students.length==0">
+            <td colspan="8">
+                No Students to display
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<p>
+    You can use the trackBy function to improve the performance 
+    of ngFor when working with large collections. The trackBy function 
+    allows Angular to track students in the collection and identify 
+    which students have changed, rather than re-creating all items 
+    in the collection on each change detection cycle.
+
+To use trackBy, you can provide a function that takes an index 
+and the current item as arguments and returns a unique value 
+that identifies the item. For example:
+</p>

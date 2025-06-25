@@ -1,0 +1,14 @@
+To create a component 
+--------------------------
+D:\Mphasis_June_25\AngularDemos\webapp1>npx ng g c mydirective
+
+D:\Mphasis_June_25\AngularDemos\webapp1>npx ng g c lifecycle-demo
+
+To generate directive
+------------------------
+D:\Mphasis_June_25\AngularDemos\webapp1>npx ng g directive change-color
+
+To generate class
+-----------------------
+D:\Mphasis_June_25\AngularDemos\webapp1>npx ng g class  global/GlobalErrorHandler
+
