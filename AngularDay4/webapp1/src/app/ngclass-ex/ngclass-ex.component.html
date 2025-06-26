@@ -1,0 +1,49 @@
+<p>ngclass-ex works!</p>
+<p [ngClass] ="'one two'"> Class one and two is applied</p>
+<br>
+<h3 [ngClass]="['three', 'four', 'five']">
+     Angular ngClass with Array of more than 1 css classes applied here. 
+</h3>
+<br>
+<h3 [ngClass]="{'one':true, 'two':false, 'three':true}">
+     Angular ngClass as an JSON Object as Key value Pair, 
+     where you can set true or false values in CSS Classes.
+</h3>
+
+<h3 [ngClass]="myclass" > Welcome</h3>
+
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sr. No. </th>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Branch</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+<tr *ngFor='let student of students;
+                let num=index;
+                let even = even; 
+                let odd = odd' 
+                         [ngClass]="{ odd: odd, even: even }">
+            <td>{{num+1}}</td>
+            <td>{{student.ID}}</td>
+            <td>{{student.FirstName}}</td>
+            <td>{{student.LastName}}</td>
+            <td>{{student.Branch}}</td>
+            <td>{{student.DOB}}</td>
+            <td>{{student.Gender}}</td>
+        </tr>
+        <tr *ngIf="!students || students.length==0">
+            <td colspan="8">
+                No Students to display
+            </td>
+        </tr>
+    </tbody>
+</table>

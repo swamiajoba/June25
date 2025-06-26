@@ -1,0 +1,16 @@
+<p>live-score-comp works!</p>
+<div style="padding: 20px;">
+  
+  <h2>🏀 Live Scoreboard (Impure Pipe)</h2>
+
+  <label>Score Threshold: 
+    <input type="number" [(ngModel)]="threshold" />
+  </label>
+
+  <ul>
+    <li *ngFor="let player of players | liveScore:threshold">
+      {{ player.name }} - {{ player.score }}
+    </li>
+  </ul>
+
+</div>

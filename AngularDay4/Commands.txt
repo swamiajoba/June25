@@ -1,0 +1,21 @@
+To generate component command is 
+	-> npx ng g c pipedemo
+
+To generate custom pipe command is 
+	-> npx ng g pipe exponentialStrength
+
+To check pure and impure pipes
+	-> npx ng g pipe pure-filter
+	-> npx ng g pipe impure-filter
+
+	-> npx ng g c my-pipe-demo
+
+To see demo of impure pipe create following
+	-> npx ng g pipe live-score
+	-> npx ng g c live-score-comp
+
+
+
+
+
+

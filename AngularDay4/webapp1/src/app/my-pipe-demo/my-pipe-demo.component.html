@@ -1,0 +1,17 @@
+<p>my-pipe-demo works!</p>
+<div style="padding: 20px;">
+  <h1>Angular Pipes Performance Demo</h1>
+
+  <input type="text" [(ngModel)]="search" placeholder="Search..." />
+  <button (click)="triggerChange()">Trigger Change Detection</button>
+
+  <h2>Pure Pipe Result</h2>
+  <ul>
+    <li *ngFor="let item of items | pureFilter:search">  {{ item }}  </li>
+  </ul>
+
+  <h2>Impure Pipe Result</h2>
+  <ul>
+    <li *ngFor="let item of items | impureFilter:search">  {{ item }}  </li>
+  </ul>
+</div>

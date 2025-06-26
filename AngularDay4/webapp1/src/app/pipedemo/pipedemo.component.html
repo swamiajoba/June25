@@ -1,0 +1,59 @@
+<p>pipedemo works!</p>
+
+<p>pipedemo works!</p>
+<h2>Employee Information</h2>
+<h3>Eid = {{eid}}</h3>
+<h3>Ename = {{ename}}</h3>
+<h3>Salary = {{salary}}</h3>
+<hr>
+<h2>String related pipes</h2>
+<h3>Ename = {{ename | uppercase }}</h3>
+<h3>Ename = {{ename | lowercase }}</h3>
+
+<hr>
+<h2>Number related pipe</h2>
+<h3> {{salary | number:'10.4-4'}} <br></h3>
+
+<hr>
+
+<h2>Currency Related pipes</h2>
+<h3>{{salary | currency:"USD" }}</h3>
+<h3>{{salary | currency:"EUR":true }}</h3>
+<br> Boolean true is used to get the sign of the currency. <br>
+<hr>
+<h2>Percent Pipe</h2>
+<h3>{{0.5478 | percent }}</h3>
+
+<hr>
+<h2>Array</h2>
+<h3>{{months}}</h3>
+<h3> {{months | slice:2:5}}</h3>
+
+<hr>
+<h2>Date Related pipe</h2>
+<h3>{{doj}}</h3>
+<h3> Date in dd/MM/yyyy format   {{  doj | date:'dd/MM/yyyy'}} </h3>
+<h3>Date in shortTime format     {{  doj | date:'shortTime'}}</h3>
+<h3>Date in shortDate format      {{  doj | date:'shortDate'}} </h3>
+<h3>Date in fullDate format     {{  doj | date:'fullDate'}}  </h3>
+<h3>Date in fullDate and uppercase format  {{  doj | date:'fullDate' | uppercase}} </h3>
+
+<hr>
+<h2>JSON pipe</h2>
+<h3>{{addressjson}}</h3>
+<h3>{{addressjson | json }} </h3>
+
+<hr>
+
+<h2>Async pipe </h2>
+
+<div style="padding: 20px;">
+  <h2>⏰ Async Pipe Demo</h2>
+  <h2>Current Time: {{ time$ | async }}</h2>
+</div>
+
+
+<h2>Custom Pipe </h2>
+<h3>Super power boost: {{2 | exponentialStrength:10}}</h3>
+<h3>Super power boost: {{4 | exponentialStrength:10}}</h3>
+
