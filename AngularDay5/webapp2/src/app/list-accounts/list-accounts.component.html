@@ -1,0 +1,18 @@
+<p>list-accounts works!</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>Account ID</th>
+        <th>Customer name</th>
+        <th>Balance</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let acc of accountsList">
+        <td>{{acc.aid}}</td>
+        <td>{{acc.customer}}</td>
+        <td>{{acc.balance}}</td>
+        <td>{{acc.email}}</td>
+    </tr>
+</table>
+
+

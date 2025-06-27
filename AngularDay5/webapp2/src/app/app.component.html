@@ -1,0 +1,30 @@
+<h1>Welcome to {{title}}</h1>
+<hr>
+<h2>Using Singleton service in app component</h2>
+<h3>Singleton Counter: {{ counter.count }}</h3>
+
+<button (click)="increase()">Increment</button>
+
+<hr>
+<h2>Using Singleton service </h2>
+<app-singleton-comp></app-singleton-comp>
+
+<hr>
+
+<h2>Using  Singleton service  manually injected</h2>
+<app-manualinjection></app-manualinjection>
+
+<h2>Using Non Singleton service </h2>
+<app-non-singleton-comp></app-non-singleton-comp>
+
+<hr>
+<h2>Using Non Singleton service in another component</h2>
+<app-another-non-singleton-comp></app-another-non-singleton-comp>
+<hr>
+
+<h2>Viewing injected token</h2>
+<app-token-comp></app-token-comp>
+
+<hr>
+<h2>List of Acconts</h2>
+<app-list-accounts></app-list-accounts>

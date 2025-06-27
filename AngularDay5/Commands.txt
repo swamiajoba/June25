@@ -1,0 +1,46 @@
+To create project command is 
+	-> npx -p @angular/cli@15 ng new webapp2
+
+To generate service command is 
+	-> npx ng g service service/CounterServiceSingleton
+	-> npx ng g service service/CounterServiceNonSingleton
+
+Create components to check with singleton and non singleton
+	-> npx ng g c singleton-comp
+	-> npx ng g c non-singleton-comp
+	-> npx ng g c another-non-singleton-comp
+
+To check  manual injection
+	-> npx ng g c manualinjection
+
+Create a folder 'token' in 'app' folder
+	Inside token folder generate file injection.token.ts
+
+Generate a service to inject the token
+	-> npx ng g service service/token
+
+Generate a component to test token
+	-> npx ng g c token-comp
+
+==================================================
+Practical example of the service
+
+fetch list of accounts from spring boot
+To do this generate following
+
+Generate a class
+	-> npx ng g class model/account
+
+Generate a service
+	-> npx ng g service service/account
+
+Generate a component
+	-> npx ng g c list-accounts
+
+
+
+
+
+
+
+

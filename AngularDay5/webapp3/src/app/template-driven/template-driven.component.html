@@ -1,0 +1,162 @@
+<p>template-driven works!</p>
+
+
+<form #contactForm="ngForm"  
+                    (ngSubmit)="onSubmit(contactForm)" novalidate >
+    <p>
+            <label for="firstname">First Name </label>
+            <input    type="text" 
+                      id="firstname" 
+                      name="firstname" 
+                      required minlength="3" 
+                      #firstname="ngModel"
+                      [(ngModel)]="contact.firstname">
+    </p>
+
+    <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
+            <div *ngIf="firstname.hasError('required')" [ngStyle]="{color:'red'}">
+              First Name is required
+            </div>
+            <div *ngIf="firstname.hasError('minlength')"  [ngStyle]="{color:'red'}">
+              First Name Minimum Length is 3
+            </div>
+          </div>
+
+           <p>
+            <label for="lastname">Last Name </label>
+            <input    type="text" 
+                      id="lastname" 
+                      name="lastname" 
+                      required maxlength="15" 
+                      #lastname="ngModel" 
+                      pattern="^[a-zA-Z]+$"  
+                      [(ngModel)]="contact.lastname">
+          </p>
+          <div *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)" >
+            <div *ngIf="lastname.hasError('required')" [ngStyle]="{color:'red'}">
+              Last Name is required
+            </div>
+            <div *ngIf="lastname.hasError('maxlength')" [ngStyle]="{color:'red'}">
+              Last Name Minimum Length is 15
+            </div>
+            <div *ngIf="lastname.hasError('pattern')" [ngStyle]="{color:'red'}"> 
+              Only characters are allowed
+            </div>
+          </div>
+        <p>
+            <label for=" email">email </label>
+            <input    type="text" 
+                      id="email" 
+                      name="email" 
+                      required email 
+                      #email="ngModel" 
+                      [(ngModel)]="contact.email">
+        </p>
+
+          <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+            <div *ngIf="email.hasError('required')" [ngStyle]="{color:'red'}">
+               Email is required
+            </div>
+            <div *ngIf="email.hasError('email')" [ngStyle]="{color:'red'}">
+              Invalid Email Address
+            </div>
+          </div>
+
+        <p>
+            <label for="password">Password </label>
+            <input    type="password" 
+                      id="password" 
+                      name="password" 
+                      required minlength="6"
+                      #password="ngModel" 
+                      [(ngModel)]="contact.password">
+          </p>
+          <div *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+            <div *ngIf="password.hasError('required')" [ngStyle]="{color:'red'}">
+               Password is required
+            </div>
+            <div *ngIf="password.hasError('minlength')" [ngStyle]="{color:'red'}">
+              Password must have Minimum 6 characters
+            </div>
+          </div>
+
+          <p>
+            <label for="confirmPassword">Confirm Password </label>
+            <input    type="password" 
+                      id="confirmPassword" 
+                      name="confirmPassword" 
+                      required
+                      #confirmPassword="ngModel" 
+                      [(ngModel)]="contact.confirmPassword">
+          </p>
+          <div *ngIf="!confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)" >
+            <div *ngIf="confirmPassword.hasError('required')" [ngStyle]="{color:'red'}">
+               Confirm Password required
+            </div>
+          </div>
+
+        <p>
+            <label for="gender">Geneder </label>
+            <input    type="radio" 
+                      value="male" 
+                      id="gender" 
+                      name="gender" 
+                      #gender="ngModel" 
+                      required 
+                      [(ngModel)]="contact.gender">  Male
+            <input    type="radio" 
+                      value="female" 
+                      id="gender" 
+                      name="gender" 
+                      #gender="ngModel" 
+                      required
+                      [(ngModel)]="contact.gender"> Female
+          </p>
+
+          <div *ngIf="!gender?.valid && (gender?.dirty || gender?.touched)">
+            <div *ngIf="gender.hasError('required')"  [ngStyle]="{color:'red'}">
+              Gender is required
+            </div>
+          </div>
+
+        <p>
+            <label for="isToc">Accept TOC</label>
+            <input    type="checkbox" 
+                      id="isToc" 
+                      name="isToc" 
+                      required 
+                      #isToc="ngModel" 
+                      [(ngModel)]="contact.isToc">
+          </p>
+          <div *ngIf="!isToc?.valid && (isToc?.dirty || isToc?.touched)" >
+            <div *ngIf="isToc.hasError('required')"   [ngStyle]="{color:'red'}">
+              Please accept the TOC
+            </div>
+          </div>
+
+        <p>
+            <label for="age">Age </label>
+            <input    type="number" 
+                      id="age" 
+                      name="age" 
+                      required min="18"
+                      #age="ngModel" 
+                      [(ngModel)]="contact.age">
+          </p>
+          <div *ngIf="!age?.valid && (age?.dirty || age?.touched)">
+            <div *ngIf="age.hasError('required')" [ngStyle]="{color:'red'}">
+               Age is required
+            </div>
+            <div *ngIf="age.hasError('min')" [ngStyle]="{color:'red'}">
+                Age must be min 18
+            </div>
+          </div>
+
+          <p>
+            <button type="submit" [disabled]="!contactForm.valid">
+                Submit
+            </button>
+          </p>
+
+
+</form>
