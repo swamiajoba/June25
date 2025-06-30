@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../service/data-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,16 +10,13 @@ import { DataServiceService } from '../service/data-service.service';
 })
 export class MydataComponent implements OnInit{
 
-   data: any;
-  error: string = '';
+   data!: any[];
+ 
 
-  constructor(private dataService: DataServiceService) {}
+   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.dataService.getDataWithHeaders().subscribe({
-      next: (res) => this.data = res,
-      error: (err) => this.error = err.message
-    });
+    this.data=this.route.snapshot.data['postData'];
   }
 
 }

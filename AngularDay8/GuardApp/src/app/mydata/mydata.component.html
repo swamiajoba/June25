@@ -1,3 +1,9 @@
 <p>mydata works!</p>
- <div *ngIf="data">{{ data | json }}</div>
-<div *ngIf="error">{{ error }}</div>
+
+ <h2>Posts</h2>
+    <ul *ngIf="data">
+      <li *ngFor="let post of data">
+        <strong>{{ post.title }}</strong><br/>
+        {{ post.body }}
+      </li>
+    </ul>

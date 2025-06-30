@@ -10,11 +10,22 @@ Create a service
 Create a guard
 	-> npx ng g guard guard/auth
 
+Create a resolver class
+	-> npx ng g class resolver/postresolver
+
 Add routing in app-routing.module.ts
+
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },  
   { path: 'login', component: LoginComponent },  
-  { path: 'mydata', component: MydataComponent, canActivate : [AuthGuard]   }, 
+
+  { path: 'mydata', 
+    component: MydataComponent, 
+     resolve: {
+      postData: Postresolver
+    },
+    canActivate : [AuthGuard]   }, 
+
   { path: 'error', component: ErrorComponent  }
 ];
 
