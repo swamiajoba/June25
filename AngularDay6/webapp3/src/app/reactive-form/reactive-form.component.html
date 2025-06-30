@@ -1,0 +1,101 @@
+<p>reactive-form works!</p>
+<p>reactive-form works!</p>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Reactive Form Example</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" 
+                        [ngClass]="{ 'is-invalid': firstName?.invalid && (firstName?.dirty || firstName?.touched) }"
+                        />
+                        <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="invalid-feedback">
+                            <div *ngIf="firstName?.hasError('required')">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': lastName?.invalid && (lastName?.dirty || lastName?.touched) }"
+                        />
+                        <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" class="invalid-feedback">
+                            <div *ngIf="lastName?.hasError('required')">Last Name is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': email?.invalid && (email?.dirty || email?.touched) }" />
+                        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="invalid-feedback">
+                            <div *ngIf="email?.hasError('required')">Email is required</div>
+                            <div *ngIf="email?.hasError('email')">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" 
+                        [ngClass]="{ 'is-invalid': password?.invalid && (password?.dirty || password?.touched) }"
+                        />
+                        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="invalid-feedback">
+                            <div *ngIf="password?.hasError('required')">Password is required</div>
+                            <div *ngIf="password?.hasError('minlength')">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control" 
+                        [ngClass]="{ 'is-invalid': confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched) }"
+                        />
+                        <div *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)" class="invalid-feedback">
+                            <div *ngIf="confirmPassword?.hasError('required')">Confirm Password is required</div>
+                            <div *ngIf="confirmPassword?.hasError('matching')">Confirm Password must match with password</div>
+                        </div>
+                    </div>
+                    <!--gender-->
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="radio" formControlName="gender" value="Male" class="form-input-check"
+                        [ngClass]="{ 'is-invalid': gender?.invalid && (gender?.dirty || gender?.touched) }" /> Male
+                        <input type="radio" formControlName="gender" value="Female" class="form-input-check" 
+                        [ngClass]="{ 'is-invalid': gender?.invalid && (gender?.dirty || gender?.touched) }" /> Female
+                
+                        <div *ngIf="gender?.invalid && (gender?.dirty || gender?.touched)" class="invalid-feedback">
+                            <div *ngIf="gender?.hasError('required')">Gender is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>age</label>
+                        <input type="number" formControlName="age" class="form-control" 
+                        [ngClass]="{ 'is-invalid': age?.invalid && (age?.dirty || age?.touched) }"
+                        />
+                        <div *ngIf="age?.invalid && (age?.dirty || age?.touched)" class="invalid-feedback">
+                            <div *ngIf="age?.hasError('required')">Age is required</div>
+                            <div *ngIf="age?.hasError('min')">Minimum Age is 18</div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label>Terms of Condition (TOC)</label>
+                        <input type="checkbox" formControlName="isToc" class="form-input-check" 
+                        [ngClass]="{ 'is-invalid': isToc?.invalid && (isToc?.dirty || isToc?.touched) }"
+                        /> Accept TOC
+                
+                        <div *ngIf="isToc?.invalid && (isToc?.dirty || isToc?.touched)" class="invalid-feedback">
+                            <div *ngIf="isToc?.hasError('required')">Acceptance is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- <button class="btn btn-primary">Register</button> -->
+                        <button [disabled]="!registerForm.valid" class="btn btn-primary">Register</button> 
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+In Angular there are two types of forms .
+1. Template driven form - In this form and its validation is
+	done in the template
+2. Reactive form - In this, form control and its validation is 
+	managed by component. Also called as model driven form
+
+To generate template driven form generate a project
+	-> npx -p @angular/cli@15 ng new webapp3
+Install bootstrap
+	-> npm install bootstrap@5 --save
+Generate a component
+	-> npx ng g c template-driven
+
+Generate a class
+	-> npx ng g class model/contact
+
+Generate a directive for validation and implements Validator interface
+	-> npx ng g directive directive/match-password
+
+For validation logic generate a class
+	-> npx ng g class utils/tvalidation
+
+====================================================
+
+For reactive forutm generate following thing
+	Generate custom validator class
+	-> npx ng g class utils/validation
+
+	Generate a component 
+	-> npx ng g c reactive-form
+
+=======================================================
+Asynchronous Validation
+
+Create a file inside utils folder
+	-> fetchEmails.ts
+
+Create a component
+	-> npx ng g c asyncvalidation
+
+
+
+
+
+
+
+
+
+	
+
