@@ -1,0 +1,57 @@
+To apply guard generate following
+Create components 
+	-> npx ng g c login
+	-> npx ng g c error
+	-> npx ng g c mydata
+
+Create a service
+	-> npx ng service service/auth
+
+Create a guard
+	-> npx ng g guard guard/auth
+
+Add routing in app-routing.module.ts
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },  
+  { path: 'login', component: LoginComponent },  
+  { path: 'mydata', component: MydataComponent, canActivate : [AuthGuard]   }, 
+  { path: 'error', component: ErrorComponent  }
+];
+
+
+
+Add menu in app.component.html
+
+
+
+
+================================================================
+For interceptors and http headers service create following
+
+Create a service
+	-> npx ng g service service/data-service
+
+Create a Custom HttpInterceptor
+	-> npx ng g interceptor interceptor/auth
+
+Register the interceptor in app.module.ts
+	providers: [
+     		{
+      		provide: HTTP_INTERCEPTORS,
+      		useClass: AuthInterceptor,
+      		multi: true
+    		}
+  	],
+
+Fetch the data in mydata component using data-service
+
+
+	
+
+
+
+
+
+
+
+

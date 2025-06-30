@@ -1,0 +1,38 @@
+To generate AccountApp with routing generate following
+
+Generate components
+	-> npx ng g c list-accounts
+	-> npx ng g c account-details
+	-> npx ng g c add-account
+	-> npx ng g c update-account
+
+Generate a model class
+	-> npx ng g class model/account
+
+Generate a service
+	-> npx ng g service service/account
+
+Add routes in app-routing.module.ts
+	const routes: Routes = [
+  		{ path: '', redirectTo: 'view-accounts', pathMatch: 'full' },  
+  		{ path: 'add-account', component: AddAccountComponent },  
+  		{ path: 'view-accounts', component: ListAccountsComponent  }, 
+  	{ path: 'account-details/:id',component:AccountDetailsComponent} ,
+  		{ path: 'update-account/:id',component:UpdateAccountComponent}
+];
+
+
+Create a menu in app.component.html
+
+
+
+
+
+
+
+
+
+
+
+
+
