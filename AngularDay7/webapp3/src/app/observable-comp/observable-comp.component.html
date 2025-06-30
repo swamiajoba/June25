@@ -1,0 +1,19 @@
+<p>observable-comp works!</p>
+
+<input type="button" value="Access Custom Observable" (click)="myobservable()"/>
+<br>
+
+<input type="button" value="Access Custom Observable using of method" (click)="myobservable1()"/>
+
+<br>
+
+<input type="button" value="Observable with rxjs operators" (click)="mymapfun()"/>
+<br>
+
+<input type="button" value="Subject" (click)="subjectfun()"/>
+<br>
+
+<h1>Data in observable </h1>
+<h3 *ngFor="let name of myObsData | async">
+    {{name}}
+</h3>

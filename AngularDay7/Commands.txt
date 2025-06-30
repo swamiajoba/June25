@@ -1,0 +1,5 @@
+To see promise in angular generate a component
+	-> npx ng g c promise-comp
+
+To see Observable in angular generate a component
+	-> npx ng g c observable-comp
