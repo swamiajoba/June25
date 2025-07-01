@@ -1,14 +1,33 @@
 To apply guard generate following
+	-> npx -p @angular/cli@15 ng new GuardApp
+	-> cd GuardApp
+	-> GuardApp> npm install bootstrap@5 --save
+	-> configure angular.json
+
 Create components 
 	-> npx ng g c login
 	-> npx ng g c error
 	-> npx ng g c mydata
 
 Create a service
-	-> npx ng service service/auth
+	-> npx ng g service service/auth
 
 Create a guard
 	-> npx ng g guard guard/auth
+
+
+
+Add menu in app.component.html
+
+
+
+
+================================================================
+For interceptors and http headers service create following
+
+Create a service
+	-> npx ng g service service/data-service
+
 
 Create a resolver class
 	-> npx ng g class resolver/postresolver
@@ -30,17 +49,6 @@ const routes: Routes = [
 ];
 
 
-
-Add menu in app.component.html
-
-
-
-
-================================================================
-For interceptors and http headers service create following
-
-Create a service
-	-> npx ng g service service/data-service
 
 Create a Custom HttpInterceptor
 	-> npx ng g interceptor interceptor/auth
